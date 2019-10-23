@@ -2,11 +2,11 @@
 # 23 Oct 2019
 ## Morning
 ## Object Oriented Programming
-### Object Oriented Porgramming is often used to represent entities that  cna be repretented in real life
+### Object Oriented Programming is often used to represent entities that  cna be repretented in real life
 
 #### Initialising an object
 
-The class defining an object in js always starts with a constructor (called constructor) and it uses the dot notation with 'this' to define a new property
+The class defining an object in js always starts with a constructor (called constructor()) and it uses the dot notation with 'this' to define a new property
 
 
 ``` js
@@ -22,14 +22,15 @@ class Cat{
 ```
 
 
-## OOP is well suited for cresting code that is easier to read and can
+## OOP is well suited for creating code that is easier to read and can
 
 # Keyboard Shorcuts
 
-**cmd + D** Highlight the last character
-**cmd + L** Highlight line-by-line
-**alt + up** / down Move highlighted code up and down the file
-**cmd + shift + F** searches for key term in all files
+* **cmd + D** Highlight the last character
+* **cmd + L** Highlight line-by-line
+* **alt + up / down** Move highlighted code up and down the file
+* **cmd + shift + F** searches for key term in all files
+* **cmd + /** Comment highlighted text
 
 ## Afternoon
 
@@ -50,3 +51,121 @@ Use event keywords to help create nested tests for the product:
 
 ```
 
+### Arrays vs Objects
+
+Arrays make it easier to reference array elements in relation to other elements, and so it is more relevant when the order/positioning of the things inside matters
+
+Objects are better from when there are many items, because it reduces the computation needed when searching for an item since it can use a since key reference instead of itereating through each element until target is found
+
+
+## Hangman Testing in OOP
+
+``` html
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+  <meta charset="utf-8" />
+  <title>Mocha Tests</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+</head>
+​
+​
+<body>
+  <!-- Mocha setup -->
+  <div id="mocha"></div>
+  <script src="https://unpkg.com/chai/chai.js"></script>
+  <script src="https://unpkg.com/mocha/mocha.js"></script>
+  ​
+  <script class="mocha-init">
+    mocha.setup('bdd');
+    mocha.checkLeaks();
+  </script>
+  ​
+  <!-- Main code -->
+  <script>
+    // write your code here
+    class Hangman {
+      constructor(wordChosen) {
+        this.solution = wordChosen
+        this.livesRemaining = 8
+        this.wordInProgress = Array(wordChosen.length).fill('_')
+        this.guessedLetters = []
+      }
+​
+      guess(letter) {
+        if (!this.solution.split('').includes(letter)) {
+          this.livesRemaining = this.livesRemaining - 1
+        }
+      }
+
+    }
+​
+​
+​
+  </script>
+  ​
+  <!-- tests -->
+  <script>
+    const expect = chai.expect
+  </script>
+  <script>
+    // write your tests here
+    describe('Hangman game', () => {
+      describe('MVP', () => {
+        describe('basic game setup', () => {
+          describe("GIVEN a word selected with five letters, e.g. 'lunch'", () => {
+            let wordSelected
+            before(() => {
+              wordSelected = 'lunch'
+            })
+            describe('WHEN a hangman game is initialised using that word', () => {
+              let newGame
+              before(() => {
+                newGame = new Hangman(wordSelected)
+              })
+              it('THEN the newGame knows that its solution is the selected word', () => {
+                expect(newGame.solution).to.equal(wordSelected)
+              })
+​
+              it('AND the current remaining lives is equal to 8', () => {
+                expect(newGame.livesRemaining).to.equal(8)
+              })
+​
+              it('AND the word in progress is represented by an array with five empty strings', () => {
+                expect(newGame.wordInProgress).to.deep.equal(['_', '_', '_', '_', '_'])
+              })
+​
+              it('AND the guessed letters is empty', () => {
+                expect(newGame.guessedLetters).to.deep.equal([])
+              })
+​
+              describe("AND a player guesses the letter 'r'", () => {
+                before(() => {
+                  newGame.guess('r')
+                })
+​
+                it('THEN the current lives remaining should be equal to 7', () => {
+                  expect(newGame.livesRemaining).to.equal(7)
+                })
+              })
+            })
+          })
+        })
+      })
+​
+    })
+​
+​
+  </script>
+  <script class="mocha-exec">
+    mocha.run();
+  </script>
+</body>
+​
+​
+</html>
+Collapse
+
+```
