@@ -1,5 +1,7 @@
-# Object Oriented Programming
 
+# 23 Oct 2019
+## Morning
+## Object Oriented Programming
 ### Object Oriented Porgramming is often used to represent entities that  cna be repretented in real life
 
 #### Initialising an object
@@ -20,5 +22,31 @@ class Cat{
 ```
 
 
-##
+## OOP is well suited for cresting code that is easier to read and can
+
+# Keyboard Shorcuts
+
+**cmd + D** Highlight the last character
+**cmd + L** Highlight line-by-line
+**alt + up** / down Move highlighted code up and down the file
+**cmd + shift + F** searches for key term in all files
+
+## Afternoon
+
+### MVP
+
+MVP (Minimum Viable Product) is the mindset that involves creating a product that meets the requirements of the client needs with the least amount of effort, where the product is still fully functional
+
+#### TDD for MVP
+
+Use event keywords to help create nested tests for the product:
+ --> **GIVEN**
+    --> **WHEN**
+        --> **THEN**
+
+
+#### Example ####
+``` js
+
+```
 
