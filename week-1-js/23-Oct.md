@@ -25,7 +25,7 @@ class Cat{
 #### Reasons for choosing OOP over other functional prgramming
 OOP is well suited for creating code that is easier to read by the programmer and other developers and when sections of code are need to be repeated within the program
 
-# Keyboard Shorcuts
+**Keyboard Shorcuts**
 
 * **cmd + D** Highlight the last character
 * **cmd + L** Highlight line-by-line
@@ -76,9 +76,11 @@ Use event keywords to help create nested tests for the product:
 
 ### Arrays vs Objects
 
-Arrays make it easier to reference array elements in relation to other elements, and so it is more relevant when the order/positioning of the things inside matters
+Arrays | Objects
+------ |  ---------
 
-Objects are better from when there are many items, because it reduces the computation needed when searching for an item since it can use a since key reference instead of itereating through each element until target is found
+Arrays make it easier to reference array elements in relation to other elements,
+and so it is more relevant when the order/positioning of the things inside matters | Objects are better from when there are many items, because it reduces the computation needed when searching for an item since it can use a since key reference instead of itereating through each element until target is found
 
 
 ## Hangman Testing in OOP
