@@ -35,20 +35,20 @@ Steps for versions created using MVP making test-based goals
 
 
 #### Version 1 - Noughts and Crosses 3 x 3 version
-* Setup
+* **Setup**
     * Make new game instance
     * Display 2D array with no moves
     * Define Player 1 and 2 - assign counter color
 
-* Allow player 1 to enter counter based on column number
+* **Allow player 1 to enter counter based on column number**
     * Get player 1 input
     * Check if column is available
     * Display player's counter in array
 
-* Check player 2 can also enter counters identifiable from player 1
+* **Check player 2 can also enter counters identifiable from player 1**
     * Display player 2's counter in array
 
-* Validation of Win / Endgame
+* **Validation of Win / Endgame**
     * After both players have had 4 goes, check if either have won
         * Check horizontal
         * Check vertical
