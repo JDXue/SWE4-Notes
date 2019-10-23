@@ -12,14 +12,16 @@ The class defining an object in js always starts with a constructor (called cons
 
 ``` js
 //defining a new class to decribe a cat
-class Cat{
+class octoCat{
     constructor(){
         this.ears = 2
-        this.eyes = "green and cute"
-        this.tail = 1
+        this.eyes = "2 cute ones"
+        this.tentacles = 8
     }
 }
 ```
+
+:octocat:
 
 
 #### Reasons for choosing OOP over other functional prgramming
@@ -42,10 +44,10 @@ MVP (Minimum Viable Product) is the mindset that involves creating a product tha
 #### TDD for MVP
 
 Use event keywords to help create nested tests for the product:
- --> **GIVEN**
-    --> **WHEN**
-        --> **THEN**
-        --> **AND**
+* --> **GIVEN**
+    * --> **WHEN**
+       * --> **THEN**
+       * --> **AND**
 
 
 #### Example ####
@@ -76,11 +78,11 @@ Use event keywords to help create nested tests for the product:
 
 ### Arrays vs Objects
 
-Arrays | Objects
------- |  ---------
 
 Arrays make it easier to reference array elements in relation to other elements,
-and so it is more relevant when the order/positioning of the things inside matters | Objects are better from when there are many items, because it reduces the computation needed when searching for an item since it can use a since key reference instead of itereating through each element until target is found
+and so it is more relevant when the order/positioning of the things inside matters
+
+Objects are better from when there are many items, because it reduces the computation needed when searching for an item since it can use a since key reference instead of itereating through each element until target is found
 
 
 ## Hangman Testing in OOP
