@@ -121,10 +121,26 @@ Objects are better from when there are many items, because it reduces the comput
         this.guessedLetters = []
       }
 ​
-      guess(letter) {
-        if (!this.solution.split('').includes(letter)) {
+      guess(letterGuessed) {
+        if (this.isLetterCorrect(letterGuessed)) {
+          const indexOfLetterInSolution = this.arrayOfLettersForSolution().findIndex(letter => letter === letterGuessed)
+          this.wordInProgress[indexOfLetterInSolution] = letterGuessed
+        } else {
           this.livesRemaining = this.livesRemaining - 1
+          this.guessedLetters.push('r')
         }
+      }
+​
+      isLetterCorrect(letter) {
+        return this.arrayOfLettersForSolution().includes(letter)
+      }
+​
+      isOver() {
+        return this.livesRemaining === 0 || this.wordInProgress.join('') === this.solution
+      }
+​
+      arrayOfLettersForSolution() {
+        return this.solution.split('')
       }
 
     }
@@ -144,12 +160,12 @@ Objects are better from when there are many items, because it reduces the comput
         describe('basic game setup', () => {
           describe("GIVEN a word selected with five letters, e.g. 'lunch'", () => {
             let wordSelected
-            before(() => {
+            beforeEach(() => {
               wordSelected = 'lunch'
             })
             describe('WHEN a hangman game is initialised using that word', () => {
               let newGame
-              before(() => {
+              beforeEach(() => {
                 newGame = new Hangman(wordSelected)
               })
               it('THEN the newGame knows that its solution is the selected word', () => {
@@ -169,12 +185,50 @@ Objects are better from when there are many items, because it reduces the comput
               })
 ​
               describe("AND a player guesses the letter 'r'", () => {
-                before(() => {
+                beforeEach(() => {
                   newGame.guess('r')
                 })
 ​
                 it('THEN the current lives remaining should be equal to 7', () => {
                   expect(newGame.livesRemaining).to.equal(7)
+                })
+​
+                it('AND the word in progress is represented by an array with five empty strings', () => {
+                  expect(newGame.wordInProgress).to.deep.equal(['_', '_', '_', '_', '_'])
+                })
+​
+                it('AND the guessed letters has one element, r', () => {
+                  expect(newGame.guessedLetters).to.deep.equal(['r'])
+                })
+​
+                describe('AND a player guesses the letter u', () => {
+                  beforeEach(() => {
+                    newGame.guess('u')
+                  })
+
+                  it('THEN the current lives remaining should be equal to 7', () => {
+                    expect(newGame.livesRemaining).to.equal(7)
+                  })
+​
+                  describe('AND a player guesses the letters l, n, c, and h', () => {
+                    beforeEach(() => {
+                      // newGame.guess('l')
+                      // newGame.guess('c')
+                      // // etc
+                      ['l', 'n', 'c', 'h'].forEach(letter => newGame.guess(letter))
+                    })
+​
+                    it('THEN the game is over', () => {
+                      console.log(newGame)
+                      expect(newGame.isOver()).to.be.true
+                    })
+                  })
+                })
+              })
+​
+              describe('AND a player guesses the letter u', () => {
+                it('THEN the current lives remaining should be equal to 8', () => {
+                  expect(newGame.livesRemaining).to.equal(8)
                 })
               })
             })
@@ -193,6 +247,4 @@ Objects are better from when there are many items, because it reduces the comput
 ​
 ​
 </html>
-Collapse
-
 ```
