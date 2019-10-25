@@ -34,7 +34,7 @@ Steps for versions created using MVP making test-based goals
 * | O O O
 
 
-#### Version 1 - Noughts and Crosses 3 x 3 version
+#### Version 1 - Noughts and Crosses 3 x 3 Version
 * [x] **Setup**
     * [x] Make new game instance
     * [x] Display 2D array with no moves
@@ -50,14 +50,39 @@ Steps for versions created using MVP making test-based goals
 * [x] **Check player 2 can also enter counters identifiable from player 1**
     * [x] Display player 2's counter in array
 
+* [x] **Validation of Win / Endgame**
+    * [x] After both players have had 3 goes, check if either have won
+        * [x] Check horizontal
+        * [x] Check vertical
+        * [x] Check diagonals
+        * [x] Check for full board
+        * [x] Display appropriate message for end of game
+
+#### Version 2 - Connect4 Full Version
+This repeats the same tests for fufill the goal, but with a larger 7x6 2D array, and with further end game validation
+* [ ] **Setup**
+    * [ ] Make new game instance
+    * [ ] Display 2D array with no moves
+    * [ ] Define Player 1 and 2 - assign counter color
+
+* [ ] **Allow a player to enter counter based on column number**
+    * [ ] Get player 1 input
+    * [ ] Check if column is available
+    * [ ] Display player's counter in array
+    * [ ] Return appropriate message for when column number is invalid
+    * [ ] Show changes to board
+
+* [ ] **Check player 2 can also enter counters identifiable from player 1**
+    * [ ] Display player 2's counter in array
+
 * [ ] **Validation of Win / Endgame**
     * [ ] After both players have had 4 goes, check if either have won
         * [ ] Check horizontal
         * [ ] Check vertical
         * [ ] Check diagonals
+        * [ ] Check for full board
+        * [ ] Display appropriate message for end of game
 
-    * [ ] Given that a player has got four in a row, display message with winning player
-    * [ ] Given that the board is full, and no person has got a row of four
 
 
 ### Useful Git Commands
@@ -86,43 +111,3 @@ Steps for versions created using MVP making test-based goals
 
     **how to remove remote references?**
 
-
-
-``` js
- getPlayerMove(playerMove){
-        let validMove = false
-        while (!validMove){
-          if(isValidMove(playerMove)){
-            validMove = true
-          }
-          else{
-            console.log(`You can't go there! Please enter a number from 1 to ${this.board[0].length}`)
-          }
-        }
-        makeAMove()
-        return parseInt(playerMove)
-      }
-
-      isValidMove(playerMove){
-        // checks that player input is bigger than 0 and smaller or equal to number of columnss
-        return (playerMove <= this.board[0].length) && (playerMove > 0) ?
-          true : false
-      }
-
-      makeAMove(playerMove){
-        //adds player move to board in next available row
-        let spaceFound = false
-        let row = 0
-        while(!spaceFound){
-          (this.board[row] == 0) ?
-            spaceFound = true : row++
-        }
-
-        //checks which player's go it is
-        if(this.playerOne.isCurrentPlayer == true){
-          this.board[playerMove][row] = "R"
-        } else{this.board[playerMove][row] = "Y" }
-
-        return this.board
-      }
-```
