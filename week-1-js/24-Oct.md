@@ -59,21 +59,28 @@ Steps for versions created using MVP making test-based goals
         * [x] Display appropriate message for end of game
 
 #### Version 2 - Connect4 Full Version
+* |0 0 0 0 0 0 0 0
+* |0 0 0 0 0 0 0 0
+* |0 0 0 0 0 0 0 0
+* |0 0 0 0 0 0 0 0
+* |0 0 0 0 0 0 0 0
+* |0 0 0 0 0 0 0 0
+
 This repeats the same tests for fufill the goal, but with a larger 7x6 2D array, and with further end game validation
-* [ ] **Setup**
-    * [ ] Make new game instance
-    * [ ] Display 2D array with no moves
-    * [ ] Define Player 1 and 2 - assign counter color
+* [x] **Setup**
+    * [x] Make new game instance
+    * [x] Display 2D array with no moves
+    * [x] Define Player 1 and 2 - assign counter color
 
-* [ ] **Allow a player to enter counter based on column number**
-    * [ ] Get player 1 input
-    * [ ] Check if column is available
-    * [ ] Display player's counter in array
-    * [ ] Return appropriate message for when column number is invalid
-    * [ ] Show changes to board
+* [x] **Allow a player to enter counter based on column number**
+    * [x] Get player 1 input
+    * [x] Check if column is available
+    * [x] Display player's counter in array
+    * [x] Return appropriate message for when column number is invalid
+    * [x] Show changes to board
 
-* [ ] **Check player 2 can also enter counters identifiable from player 1**
-    * [ ] Display player 2's counter in array
+* [x] **Check player 2 can also enter counters identifiable from player 1**
+    * [x] Display player 2's counter in array
 
 * [ ] **Validation of Win / Endgame**
     * [ ] After both players have had 4 goes, check if either have won
@@ -111,3 +118,10 @@ This repeats the same tests for fufill the goal, but with a larger 7x6 2D array,
 
     **how to remove remote references?**
 
+g = new connectFour()
+g.getPlayerMove(3)
+g.getPlayerMove(2)
+g.getPlayerMove(3)
+g.getPlayerMove(2)
+g.getPlayerMove(1)
+g.getPlayerMove(2)
