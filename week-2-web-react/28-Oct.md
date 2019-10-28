@@ -40,12 +40,25 @@ Because of this, you use useState(), which allows you to make changes to a const
 **Make sure to use import React and export the componets for use!**
 
 
+**Properties**
 Props is a good way fo passing down elements and properties from parent to child
+
+They are a way of ensuring functions are not completely statzic
 
 Passing elements in the reverse is rare but would often need callbacks
 ``` js
 const total = props.total
 const { total } = props
+
+//Parent
+function App() {
+    <AComponentExample day="Monday"/>
+}
+
+function AComponentExample({ day }) { //day is assigned as a prop as it's parsed in, which can then be used in AComponentExample
+    const { day } = props
+    <p>Today is {day}</p>
+}
 
 ```
 React fragments are an alternative to div elements. which is slighly better to use when div is used as a container to avoid errors when rendering, because it doesn't show up in the element tags
@@ -58,3 +71,4 @@ React fragments are an alternative to div elements. which is slighly better to u
 
 
 ```
+
