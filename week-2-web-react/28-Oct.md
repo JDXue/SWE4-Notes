@@ -43,9 +43,12 @@ Because of this, you use useState(), which allows you to make changes to a const
 **Properties**
 Props is a good way fo passing down elements and properties from parent to child
 
-They are a way of ensuring functions are not completely statzic
+They are a way of ensuring functions are not completely static
 
 Passing elements in the reverse is rare but would often need callbacks
+
+Props is commonly used for when two or more actions are very similar in structure, but possibly have different values
+
 ``` js
 const total = props.total
 const { total } = props
@@ -71,4 +74,46 @@ React fragments are an alternative to div elements. which is slighly better to u
 
 
 ```
+
+## Afternoon
+
+```js
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  const [playerName, setPlayer] = React.useState('Player')
+  const [typedInput, setPlayer] = React.useState('')
+  return (
+    <>
+    <input
+      onChange = {event => {
+        console.log(event.target.value)
+        setTypedInput(event.target.value)
+      }}
+    />
+    </>
+  );
+}
+
+export default App;
+
+function CardList({ message, list}) {
+  return(
+    <p>{message}</p>
+  )
+}
+
+```
+
+
+### Bulls and Cows
+
+* [x] Computer makes a random four-digit number
+* [ ] User inputs guess
+    * [ ] Add submit button
+* [ ] Compare user guess with four-digit number (cows)
+* [ ] Output how many digits are the same
+* [ ] How many digits are the same and in the correct position (bulls)
 
