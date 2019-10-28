@@ -111,9 +111,31 @@ function CardList({ message, list}) {
 ### Bulls and Cows
 
 * [x] Computer makes a random four-digit number
-* [ ] User inputs guess
-    * [ ] Add submit button
-* [ ] Compare user guess with four-digit number (cows)
-* [ ] Output how many digits are the same
-* [ ] How many digits are the same and in the correct position (bulls)
+* [x] User inputs guess
+    * [x] Add submit button
 
+* [x] Compare user guess with four-digit number
+    * [x] Output how many digits are the same (cows)
+    * [x] How many digits are the same and in the correct position (bulls)
+
+* [ ] Validation
+    * [ ] Check user guess is an integer
+    * [ ] Check user guess is four digits
+    * [ ]
+
+* [ ] Confirmation of correct number
+
+
+### Notes for Cloned React Apps
+
+**Make sure the cloned repo has all node modules required for executing the react app, by using:**
+
+```
+npm install
+```
+
+and then
+
+```
+npm start
+```
