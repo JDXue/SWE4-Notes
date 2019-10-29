@@ -57,9 +57,22 @@ const { total } = props
 function App() {
     <AComponentExample day="Monday"/>
 }
+```
+
+There are two different ways of destructuring the properties object parsed into the components:
+
+``` js
 
 function AComponentExample({ day }) { //day is assigned as a prop as it's parsed in, which can then be used in AComponentExample
-    const { day } = props
+    within the component
+    <p>Today is {day}</p>
+}
+
+```
+
+``` js
+function AComponentExample(props) {
+    const { day } = props // here props is destructured within the component
     <p>Today is {day}</p>
 }
 
@@ -70,10 +83,6 @@ React fragments are an alternative to div elements. which is slighly better to u
 
 
 
-```js
-
-
-```
 
 ## Afternoon
 
@@ -118,10 +127,9 @@ function CardList({ message, list}) {
     * [x] Output how many digits are the same (cows)
     * [x] How many digits are the same and in the correct position (bulls)
 
-* [ ] Validation
-    * [ ] Check user guess is an integer
-    * [ ] Check user guess is four digits
-    * [ ]
+* [x] Validation
+    * [x] Check user guess is an integer
+    * [x] Check user guess is four digits
 
 * [ ] Confirmation of correct number
 
