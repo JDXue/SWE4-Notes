@@ -28,7 +28,7 @@ Because of this, you use useState(), which allows you to make changes to a const
         setHand(hand.concat([3]))}>
 ```
 
-**React custom elemetns use capital letters to differntiate from HTML elements**
+**React custom elements use capital letters to differentiate from HTML elements**
 
 
 **there are two ways of assigning a const as props (props is an object from which you can reference inside functions)**
@@ -41,13 +41,15 @@ Because of this, you use useState(), which allows you to make changes to a const
 
 
 **Properties**
-Props is a good way fo passing down elements and properties from parent to child
+* Props is a good way fo passing down elements and properties from parent to child
 
-They are a way of ensuring functions are not completely static
+* They are a way of ensuring functions are not completely static
 
-Passing elements in the reverse is rare but would often need callbacks
+* Passing elements in the reverse is rare but would often need callbacks
 
-Props is commonly used for when two or more actions are very similar in structure, but possibly have different values
+* Props is commonly used for when two or more actions are very similar in structure, but possibly have different values
+
+* Props doesn't have to be just an object, it can also be an array, function etc.
 
 ``` js
 const total = props.total
@@ -131,7 +133,15 @@ function CardList({ message, list}) {
     * [x] Check user guess is an integer
     * [x] Check user guess is four digits
 
+* [x] Separating components into dedicated files (abstraction)
+
 * [ ] Confirmation of correct number
+* [ ] Hide computer number and display when:
+  * [ ] when user has four bulls
+  * [ ] number of guess is four
+  * [ ] user presses 'give up'
+
+* [ ] Styling
 
 
 ### Notes for Cloned React Apps
