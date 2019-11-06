@@ -25,10 +25,9 @@ It is rare that a  person will have to make components in React all of the time,
 * [x] When start button is pressed, the computer will randomly select a sequence of colours
 * [x] Each colour in computer's sequence should come up as text
 
-*
 
-
-
-
+### Additional features
 * [ ] Each colour chosen by the computer in the sequence should change the corresponding colour of each button in sequence
+* [ ] User can add name to highscore board
+* [ ] User can view highscores in the main menu
 
