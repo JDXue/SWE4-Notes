@@ -3,7 +3,7 @@
 ## Morning
 
 ### useEffect()
-useEffect can be used for
+useEffect can be used for **side effects** of given actions within your program
 
 ## Afternoon
 
@@ -23,15 +23,18 @@ useEffect can be used for
 ### MVP - ver 1
 * [x] Display time
 * [x] Display date
-* [x] Get the weather as json from weather api
-* [ ] Display weather as text
+* [x] Get the current weather as json from weather api
+* [x] Display weather as text
 
 ### Ver 2
-* [ ] Get local news from news api
-* [ ] Show different colour text based on temperature
-* [ ] Show weather icon based on description
+* [x] Show weather icon based on description
+* [x] Create settings tab
+* [x] User can change temperature unit
+* [x] User can change weather location
 
 ### Ver 3
-* [ ] Use browser database to save user choices on city location (choose lattitude and logitude) / news topics
+* [ ] Use browser database / google map api to save user choices on city location (choose lattitude and logitude) / news topics
 * [ ] Allow user to login to find saved choices
+* [ ] Get 5 day forecast
+* [ ] Get local news from news api / misfit api
 
