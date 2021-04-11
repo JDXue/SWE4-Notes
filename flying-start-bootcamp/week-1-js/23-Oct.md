@@ -3,7 +3,7 @@
 ## Morning
 ## Object Oriented Programming
 
-**Object Oriented Programming is often used to represent entities that can be repretented in real life**
+**Object Oriented Programming is often used to represent entities that can be represented in real life**
 
 #### Initialising an object
 
@@ -11,7 +11,7 @@ The class defining an object in js always starts with a constructor (called cons
 
 
 ``` js
-//defining a new class to decribe a cat
+//defining a new class to decribe octocat
 class octoCat{
     constructor(){
         this.ears = 2
@@ -27,7 +27,7 @@ class octoCat{
 #### Reasons for choosing OOP over other functional prgramming
 OOP is well suited for creating code that is easier to read by the programmer and other developers and when sections of code are need to be repeated within the program
 
-**Keyboard Shorcuts**
+**Keyboard Shorcuts (VSCode)**
 
 * **cmd + D** Highlight the last character
 * **cmd + L** Highlight line-by-line
